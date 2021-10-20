@@ -420,7 +420,9 @@ export default function Home() {
           </div>
 
           <div className={styles.flex}>
-            <div className={styles.support}>Support Creator</div>
+            <div className={styles.support} onClick={toggleDonationMenu}>
+              Support Creator
+            </div>
             <div className={styles.suggest}>Suggest Influencers</div>
           </div>
           <div className={styles.heading}>
@@ -462,7 +464,19 @@ export default function Home() {
             </p>
             <p className={styles.alternativeDonationTitle}>OR</p>
             <div className={styles.donateBtn}>
-              <input className={styles.selectPrice} placeholder="Enter ETH" />
+              {/* <input className={styles.selectPrice} placeholder="Enter ETH" /> */}
+              <select
+                name="selectPrice"
+                id="selectPrice"
+                className={styles.selectPrice}
+              >
+                <option value="0.01">0.01 ETH</option>
+                <option value="0.02">0.02 ETH</option>
+                <option value="0.05">0.05 ETH</option>
+                <option value="0.1">0.1 ETH</option>
+                <option value="0.5">0.5 ETH</option>
+                <option value="1">1 ETH</option>
+              </select>
               <div className={styles.btn}>CONNECT WALLET</div>
             </div>
           </div>

@@ -330,6 +330,7 @@
   font-weight: 700;
   font-size: 19px;
   width: 210px;
+  appearance: none;
 }
 
 .selectPrice::placeholder {
