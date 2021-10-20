@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -13,4 +15,27 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #141414;
+  /* display: none; */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1b1b1b;
+  /* display: none; */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  /* background: #1b1b1b; */
+  display: none;
 }

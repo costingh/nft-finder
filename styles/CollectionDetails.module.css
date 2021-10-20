@@ -1,0 +1,9 @@
+.container {
+  max-width: 70vw;
+  min-height: 60vh;
+  width: 100%;
+  padding: 40px;
+  border-radius: 20px;
+  /* background: #141414; */
+  background: #1b1b1b;
+}
