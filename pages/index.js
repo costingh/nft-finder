@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Loading from "../components/Loading";
 import CollectionDetails from "../components/CollectionDetails";
 import sort from "../utils/sorting";
+import EthTransactionPanel from "../components/EthTransactionPanel";
 
 export default function Home() {
   const [donate, setDonate] = useState(false);
@@ -445,42 +446,10 @@ export default function Home() {
         </div>
  */}
 
-        <div className={donate ? styles.overlay : styles.overlayHidden}>
-          <div className={styles.innerOverlay}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="#e1e1e1"
-              className={styles.closeMenu}
-              onClick={toggleDonationMenu}
-            >
-              <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
-            </svg>
-            <p className={styles.yellow}>Wallet Address:</p>
-            <p className={styles.walletAddress}>
-              0x85c550F57aC72F8ddcbf638dFfD4a60d610B4814
-            </p>
-            <p className={styles.alternativeDonationTitle}>OR</p>
-            <div className={styles.donateBtn}>
-              {/* <input className={styles.selectPrice} placeholder="Enter ETH" /> */}
-              <select
-                name="selectPrice"
-                id="selectPrice"
-                className={styles.selectPrice}
-              >
-                <option value="0.01">0.01 ETH</option>
-                <option value="0.02">0.02 ETH</option>
-                <option value="0.05">0.05 ETH</option>
-                <option value="0.1">0.1 ETH</option>
-                <option value="0.5">0.5 ETH</option>
-                <option value="1">1 ETH</option>
-              </select>
-              <div className={styles.btn}>CONNECT WALLET</div>
-            </div>
-          </div>
-        </div>
+        <EthTransactionPanel
+          donate={donate}
+          toggleDonationMenu={toggleDonationMenu}
+        />
       </main>
     </div>
   );

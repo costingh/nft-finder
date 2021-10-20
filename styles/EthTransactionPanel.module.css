@@ -1,0 +1,117 @@
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #1414149d;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+.overlayHidden {
+  opacity: 0;
+  z-index: -10;
+  position: absolute;
+}
+
+.innerOverlay {
+  padding: 40px;
+  background: #1b1b1b;
+  border-radius: 40px;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+.alternativeDonationTitle {
+  color: #e1e1e1;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.yellow {
+  color: #ffc83d;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 25px;
+  text-align: center;
+}
+
+.walletAddress {
+  color: #e1e1e1;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.closeMenu {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.closeMenu:hover {
+  fill: #ffc83d;
+}
+
+.donateBtn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectPrice {
+  padding: 10px 30px;
+  background: #e81224;
+  border-radius: 10px;
+  color: #e1e1e1;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid #e81224;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+  outline: none;
+  line-height: 19px;
+  font-weight: 700;
+  font-size: 19px;
+  width: 210px;
+  appearance: none;
+}
+
+.selectPrice::placeholder {
+  color: #141414;
+  font-weight: 700;
+  font-size: 19px;
+  text-align: center;
+}
+
+.selectPrice:hover {
+  background: transparent;
+  color: #e81224;
+}
+
+.btn {
+  padding: 10px 30px;
+  background: #ffc83d;
+  border-radius: 10px;
+  color: #141414;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid #ffc83d;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+  appearance: none;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #ffc83d;
+}

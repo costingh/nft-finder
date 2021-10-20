@@ -246,7 +246,7 @@
   transition: all 0.5s ease;
 }
 
-.overlay {
+/* .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -360,7 +360,7 @@
 .btn:hover {
   background: transparent;
   color: #ffc83d;
-}
+} */
 
 .popularArtistsListWrapper {
   position: absolute;
