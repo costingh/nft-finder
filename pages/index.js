@@ -7,6 +7,7 @@ import sort from "../utils/sorting";
 import EthTransactionPanel from "../components/EthTransactionPanel";
 
 import SEO from "../components/SEO";
+import SuggestArtistForm from "../components/SuggestArtistForm";
 
 export default function Home() {
   const [donate, setDonate] = useState(false);
@@ -16,6 +17,7 @@ export default function Home() {
   const [direction, setDirection] = useState(false); //false for 'descending', true for 'ascending'
   const [loading, setLoading] = useState(false);
   const [showCriteriaMenu, setShowCriteriaMenu] = useState(false);
+  const [suggestArtistOpened, setSuggestArtistOpened] = useState(false);
   const [displayCollectionInformation, setDisplayCollectionInformation] =
     useState(false);
 
@@ -187,7 +189,7 @@ export default function Home() {
     if (artist.wallet) {
       setLoading(true);
       fetch(
-        "https://api.opensea.io/api/v1/collections?offset=0&limit=20&asset_owner=" +
+        "https://api.opensea.io/api/v1/collections?offset=0&limit=100&asset_owner=" +
           artist.wallet
       )
         .then((response) => response.json())
@@ -428,7 +430,12 @@ export default function Home() {
             <div className={styles.support} onClick={toggleDonationMenu}>
               Support Creator
             </div>
-            <div className={styles.suggest}>Suggest Influencers</div>
+            <div
+              className={styles.suggest}
+              onClick={() => setSuggestArtistOpened(true)}
+            >
+              Suggest Influencers
+            </div>
           </div>
           <div className={styles.heading}>
             See What Influencers are holding in their wallets 😎
@@ -453,6 +460,11 @@ export default function Home() {
         <EthTransactionPanel
           donate={donate}
           toggleDonationMenu={toggleDonationMenu}
+        />
+
+        <SuggestArtistForm
+          suggestArtistOpened={suggestArtistOpened}
+          setSuggestArtistOpened={setSuggestArtistOpened}
         />
       </main>
     </div>
