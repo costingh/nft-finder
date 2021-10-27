@@ -7,6 +7,7 @@ export default function SuggestArtistForm({
   return (
     <div
       className={suggestArtistOpened ? styles.overlay : styles.overlayHidden}
+      style={{ background: "rgba(0,0,0,0.8)" }}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
